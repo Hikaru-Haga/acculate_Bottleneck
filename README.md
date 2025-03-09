@@ -23,7 +23,7 @@ save_npyは各画像の人間判断による類似度判断をまとめてリス
 https://homcloud.dev/index.html
 * HomCloud 3.6
 
-またデータセットはBAPPSデータセットを使用している。詳しくは以下URLを確認。
+またデータセットはBAPPSデータセットを使用している。詳しくは以下URLを確認。重いためgithubには置いていない。
 https://github.com/richzhang/PerceptualSimilarity
 
 # ライセンス
