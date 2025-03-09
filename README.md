@@ -18,3 +18,15 @@ save_npyは各画像の人間判断による類似度判断をまとめてリス
 https://homcloud.dev/index.html
 * HomCloud 3.6
 
+# ライセンス
+筆者については特になし。ただしHomCloudライブラリ、BAPPSデータセットの使用にはそれぞれのライセンスを要確認。
+
+# 参考資料
+The Unreasonable Effectiveness of Deep Features as a Perceptual Metric
+Richard Zhang, Phillip Isola, Alexei A. Efros, Eli Shechtman, Oliver Wang
+https://arxiv.org/pdf/1801.03924
+
+# 著者
+* 芳賀　光
+* 所属　茨城大学大学院　理工学研究科　情報工学専攻
+* lightning2000702@gmail.com
