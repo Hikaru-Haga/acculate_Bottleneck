@@ -6,11 +6,17 @@ Created on Tue Nov 19 17:00:58 2024
 """
 
 import os
-import shutil
+
+def main():
+    source_dir = "dataset"  # 元ディレクトリのパス
+    destination_dir = "per_dataset"  # 複製先のパス
+
+    duplicate_subdirectories(source_dir, destination_dir)
+    
 
 def duplicate_subdirectories(source_dir, destination_dir):
     """
-    指定されたディレクトリ内の全てのサブディレクトリを複製します。
+    指定されたディレクトリ内の全てのサブディレクトリを複製。
 
     Args:
         source_dir (str): 元のディレクトリパス。
@@ -36,8 +42,7 @@ def duplicate_subdirectories(source_dir, destination_dir):
             os.makedirs(dest_path, exist_ok=True)
             print(f"ディレクトリを複製しました: {dest_path}")
 
-# 使用例
-source_dir = "dataset"  # 元ディレクトリのパス
-destination_dir = "per_dataset"  # 複製先のパス
 
-duplicate_subdirectories(source_dir, destination_dir)
+
+if __name__ == "__main__":
+    main()

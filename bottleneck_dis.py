@@ -13,6 +13,15 @@ import os
 import cv2
 import glob
 
+def main():
+    make_BD('per_dataset/2afc/val/cnn')
+    make_BD('per_dataset/2afc/val/color')
+    make_BD('per_dataset/2afc/val/deblur')
+    make_BD('per_dataset/2afc/val/frameinterp')
+    make_BD('per_dataset/2afc/val/superres')
+    make_BD('per_dataset/2afc/val/traditional')
+
+
 
 def make_BD(source_dir):
     source_split = str(source_dir).split('/')
@@ -40,11 +49,6 @@ def make_BD(source_dir):
     np.save(os.path.join('result','result_' + source_split[2] + '_' + source_split[3] + '_d1'), res_numpy)
     
 
-make_BD('per_dataset/2afc/val/cnn')
-make_BD('per_dataset/2afc/val/color')
-make_BD('per_dataset/2afc/val/deblur')
-make_BD('per_dataset/2afc/val/frameinterp')
-make_BD('per_dataset/2afc/val/superres')
-make_BD('per_dataset/2afc/val/traditional')
-
+if __name__ == "__main__":
+    main()
     

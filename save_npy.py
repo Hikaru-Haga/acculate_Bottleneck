@@ -13,10 +13,22 @@ import os
 import cv2
 import glob
 
+def main():
+    judge_list = 'dataset/2afc/train/mix/judge/*.npy'
+    dis_list = 'per_dataset/2afc/train/mix/judge/judge_res'
+    
+    save_npy('dataset/2afc/val/cnn/judge/*.npy', 'per_dataset/2afc/val/cnn/judge/judge_res')
 
 
-judge_list = 'dataset/2afc/train/mix/judge/*.npy'
-dis_list = 'per_dataset/2afc/train/mix/judge/judge_res'
+    """
+    save_npy('dataset/2afc/val/color/judge/*.npy', 'per_dataset/2afc/val/color/judge/judge_res')
+    save_npy('dataset/2afc/val/deblur/judge/*.npy', 'per_dataset/2afc/val/deblur/judge/judge_res')
+    save_npy('dataset/2afc/val/frameinterp/judge/*.npy', 'per_dataset/2afc/val/frameinterp/judge/judge_res')
+    save_npy('dataset/2afc/val/superres/judge/*.npy', 'per_dataset/2afc/val/superres/judge/judge_res')
+    save_npy('dataset/2afc/val/traditional/judge/*.npy', 'per_dataset/2afc/val/traditional/judge/judge_res')
+    """
+
+
 
 def save_npy(judge_dir,dis_list):
     judge_list = glob.glob(judge_dir)
@@ -33,13 +45,5 @@ def save_npy(judge_dir,dis_list):
     np.save(dis_list , x_numpy)
     """
     
-save_npy('dataset/2afc/val/cnn/judge/*.npy', 'per_dataset/2afc/val/cnn/judge/judge_res')
-
-
-"""
-save_npy('dataset/2afc/val/color/judge/*.npy', 'per_dataset/2afc/val/color/judge/judge_res')
-save_npy('dataset/2afc/val/deblur/judge/*.npy', 'per_dataset/2afc/val/deblur/judge/judge_res')
-save_npy('dataset/2afc/val/frameinterp/judge/*.npy', 'per_dataset/2afc/val/frameinterp/judge/judge_res')
-save_npy('dataset/2afc/val/superres/judge/*.npy', 'per_dataset/2afc/val/superres/judge/judge_res')
-save_npy('dataset/2afc/val/traditional/judge/*.npy', 'per_dataset/2afc/val/traditional/judge/judge_res')
-"""
+if __name__ == "__main__":
+    main()
